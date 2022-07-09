@@ -1,6 +1,8 @@
+
 let money = parseInt(localStorage.getItem("money"));
 document.getElementById("money").innerHTML = `${money}`;
 document.getElementById("baedang").innerHTML = `배당률 : ${localStorage.getItem("ranbae")}%`;
+
 
 function betting(){
     if(bet>0) {

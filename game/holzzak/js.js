@@ -1,17 +1,25 @@
+
 function gohome(){
     zmoney();
     window.location.href = "../../index.html";
 }
-
-let bet = 0;
+function test(){
+    swal("Hello world!");
+}
+let bet = parseInt(localStorage.getItem("bet"));
 let money = parseInt(localStorage.getItem("money"));
 document.getElementById("moneyshow").innerHTML = `<h1 id="money">${money}원 보유중</h1>`;
+
+document .getElementById("betting").innerHTML = `${bet}원 베팅함`
 
 let ranbae = parseInt(localStorage.getItem("ranbae"));
 if(ranbae>100){
     document.getElementById("baedang").innerHTML = `${ranbae}%`;
 }else {
     zmoney();
+    changeRanbae();
+}
+function changeRanbae(){
     ranbae = Math.round(Math.random() * 300);
     if (ranbae < 100) {
         ranbae += 100;
@@ -19,15 +27,28 @@ if(ranbae>100){
     localStorage.setItem("ranbae", ranbae);
     document.getElementById("baedang").innerHTML = `${ranbae}%`;
 }
-
 function holzzakgame(cho) {
 
-    let bet = parseInt(localStorage.getItem("bet"));
+
     if (bet == null || bet === 0) {
-        alert("베팅하세요");
-        popup();
+        Swal.fire({
+            title: '베팅하세요!',
+            text: "배팅을 하셔야 게임을 진행 하실수 있습니다",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '베팅할게요!',
+            cancelButtonText: '안해!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                popup();
+            }
+        })
+
     } else {
         let num = Math.round(Math.random() * 100 + 1);
+        document.getElementById("num").innerHTML = num;
         if (num % 2 === cho) {
 
             money = money + Math.round(bet * (ranbae / 100));
@@ -45,6 +66,8 @@ function holzzakgame(cho) {
             console.log("오답");
             console.log(num);
         }
+        changeRanbae();
+
     }
 }
 function popup(){
@@ -53,7 +76,7 @@ function popup(){
 }
 function zmoney(){
     if (money == 0) {
-        money = 10000;
+        money = 1000000;
         localStorage.setItem("money", money);
         document.getElementById("moneyshow").innerHTML = `<h1 id="money">${money}원 보유중</h1>`;
     }
