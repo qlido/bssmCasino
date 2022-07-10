@@ -1,3 +1,8 @@
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
 * {
     box-sizing: border-box;
     overflow:hidden
@@ -7,7 +12,7 @@ body {
     width: 300px;
     margin: 0 auto;
     position: relative;
-    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-color: blanchedalmond;
 }
 #head h1 {
     text-align: center;
@@ -18,7 +23,7 @@ body {
 .container {
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-color: blanchedalmond;
     opacity: 1;
     position: absolute;
     overflow: hidden;
@@ -31,15 +36,6 @@ body {
     color: #fff;
 }
 
-.submit {
-    width: 115px;
-    color: rgba(0,0,0,1);
-    position: relative;
-    font-weight: normal;
-    font-size: 24px;
-    opacity: 1;
-    text-align: center;
-}
 .betinput {
     width: 250px;
     height: 100px;
@@ -47,10 +43,133 @@ body {
     opacity: 1;
     overflow: hidden;
     position: relative;
-    font-size:30px;
+    font-size:23px;
+    border: lightgoldenrodyellow solid 3px;
+    border-radius: 10px;
 }
+input:focus {outline:none;}
 #mollu {
     text-align: center;
     width: 70%;
-    background-color: coral;
+    background-color: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+.position {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 15%;
+}
+
+#workarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1a3e;
+}
+
+#personal {
+    color:white;
+    text-decoration:none;
+    position:absolute;
+    bottom:15px;
+    right:2%;
+}
+
+
+.spot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+
+#shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: #009FFD;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+}
+
+#text {
+    margin-top: -35px;
+    text-align: center;
+}
+
+#text button {
+    color: black;
+    background-color:transparent;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.1em;
+    border: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+
+.svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #06D6A0;
+}
+.custom-btn {
+    width: 70px;
+    height: 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+.btn-2 {
+    background: rgb(96,9,240);
+    background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    border: none;
+
+}
+.btn-2:before {
+    height: 0;
+    width: 2px;
+}
+.btn-2:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .5),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }

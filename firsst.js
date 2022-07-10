@@ -1,5 +1,6 @@
-let money;
-if(localStorage.getItem("money")==null){
+let money = localStorage.getItem("money");
+
+if(typeof(money)!="number"){
     localStorage.setItem("money","1000000");
      money= parseInt(localStorage.getItem("money"));
     document.getElementById("moneyshow").innerHTML = `<h1 id="money">현재: ${money}</h1>`;
@@ -12,3 +13,5 @@ function gameOn(eventobj){
     console.log(evid);
     location.href = `./game/${evid}/${evid}.html`;
 }
+
+

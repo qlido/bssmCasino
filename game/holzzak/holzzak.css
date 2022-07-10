@@ -1,5 +1,7 @@
-
-
+body{
+    background-color: floralwhite;
+    overflow: hidden;
+}
 #main {
     display: flex;
     flex-direction: column;
@@ -10,7 +12,13 @@
 #baedangdiv h1{
     font-family: 'Jua', sans-serif;
 }
-
+#baedangdiv {
+    width: 70vw;
+    display: flex;
+    border: beige dashed;
+    flex-direction: row;
+    align-content: center;
+}
 #btn {
     display: flex;
     width: 100vw;

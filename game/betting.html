@@ -1,11 +1,12 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"/>
     <link href="./popup.css" rel="stylesheet"/>
+    <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="./popup.js"></script>
     <title>Document</title></head>
-<meta charset = "utf-8">
+<meta charset="utf-8">
 <body>
 
 
@@ -18,10 +19,17 @@
         <h2 id="baedang">배당률: 200%</h2>
     </div>
     <label>
-        <input class="betinput" id="bet" type="number">
+        <input class="betinput" id="bet" type="number" placeholder="숫자를 입력하세요" autofocus>
     </label>
-    <button class="submit" onclick="betting()">submit</button>
-    <button class="close" onclick="popcl()">close</button>
+    <div class="svg-wrapper">
+        <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+            <rect id="shape" height="40" width="150"/>
+            <div id="text">
+                <button class="spot" onclick="betting();">submit</button>
+            </div>
+        </svg>
+    </div>
+    <button class="custom-btn btn-2" onclick="popcl()">close</button>
 </div>
 </body>
 </html>

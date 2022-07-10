@@ -8,9 +8,13 @@ function test(){
 }
 let bet = parseInt(localStorage.getItem("bet"));
 let money = parseInt(localStorage.getItem("money"));
+if(isNaN(money)){
+    money = 1000000;
+    localStorage.setItem("money",money);
+}
 document.getElementById("moneyshow").innerHTML = `<h1 id="money">${money}원 보유중</h1>`;
 
-document .getElementById("betting").innerHTML = `${bet}원 베팅함`
+document .getElementById("betting").innerHTML = `${bet}`
 
 let ranbae = parseInt(localStorage.getItem("ranbae"));
 if(ranbae>100){
@@ -81,3 +85,5 @@ function zmoney(){
         document.getElementById("moneyshow").innerHTML = `<h1 id="money">${money}원 보유중</h1>`;
     }
 }
+
+
