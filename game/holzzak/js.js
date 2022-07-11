@@ -32,8 +32,6 @@ function changeRanbae(){
     document.getElementById("baedang").innerHTML = `${ranbae}%`;
 }
 function holzzakgame(cho) {
-0
-
     if (bet == null || bet === 0 || isNaN(bet) || typeof bet == 'string') {
         Swal.fire({
             title: '베팅하세요!',
@@ -56,16 +54,20 @@ function holzzakgame(cho) {
         if (num % 2 === cho) {
 
             money = money + Math.round(bet * (ranbae / 100));
+            bet = 0;
             localStorage.setItem("bet", 0);
             localStorage.setItem("money", money);
             money = Math.round(parseInt( localStorage.getItem("money")));
+            document.getElementById("betting").innerHTML = `${bet}`;
             document.getElementById("moneyshow").innerHTML = `<h1 id="money">${money}원 보유중</h1>`;
             console.log("정답");
             console.log(num);
             alert("성공!");
         } else {
             alert("실패!");
+            bet = 0;
             localStorage.setItem("bet", 0);
+            document.getElementById("betting").innerHTML = `${bet}`;
             document.getElementById("moneyshow").innerHTML = `<h1 id="money">${money}원 보유중</h1>`;
             console.log("오답");
             console.log(num);
