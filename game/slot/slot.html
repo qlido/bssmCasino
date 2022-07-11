@@ -3,12 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="/path/to/slotmachine.min.js"></script>
+    <script src="../../node_modules/jquery-slotmachine/dist/slotmachine.min.js" defer></script>
+    <script src="./slot.js" defer></script>
+    <link rel="stylesheet" href="../../GSS/HEAD.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+    </style>
+    <link rel="stylesheet" href="slot.css">
 </head>
 <body>
 <div id="head">
-    <h1 style="display: inline-block">BSSM Casino</h1>
+    <h1 style="display: inline-block" onclick="gohome()">BSSM Casino</h1>
+    <div id="baedangdiv">
+        <h1>슬롯 게임 배당률 :</h1>
+        <h1 id="baedang">200%</h1>
+        <h1>베팅한 금액 :</h1>
+        <h1 id="betting">00000</h1>
+        <h1>원 베팅함</h1>
+    </div>
     <div id="moneyshow">adsf</div>
+</div>
+<div id="container">
+    <div id="allSlot">
+
+            <div id="slot1">
+                <div class="inslot1">1</div>
+                <div class="inslot2">2</div>
+                <div class="inslot3">3</div>
+                <div class="inslot4">😍</div>
+                <div class="inslot5">😘</div>
+                <div class="inslot6">😁</div>
+                <div class="inslot7">7</div>
+                <div class="inslot8">💕</div>
+                <div class="inslot9">9</div>
+                <div class="inslot10">🎶</div>
+                <div class="inslot11">😋</div>
+            </div>
+
+        <div id="slot2">
+            <div class="inslot1">1</div>
+            <div class="inslot2">2</div>
+            <div class="inslot3">3</div>
+            <div class="inslot4">😍</div>
+            <div class="inslot5">😘</div>
+            <div class="inslot6">😁</div>
+            <div class="inslot7">7</div>
+            <div class="inslot8">💕</div>
+            <div class="inslot9">9</div>
+            <div class="inslot10">🎶</div>
+            <div class="inslot11">😋</div>
+        </div>
+        <div id="slot3">
+            <div class="inslot1">1</div>
+            <div class="inslot2">2</div>
+            <div class="inslot3">3</div>
+            <div class="inslot4">😍</div>
+            <div class="inslot5">😘</div>
+            <div class="inslot6">😁</div>
+            <div class="inslot7">7</div>
+            <div class="inslot8">💕</div>
+            <div class="inslot9">9</div>
+            <div class="inslot10">🎶</div>
+            <div class="inslot11">😋</div>
+        </div>
+
+    </div>
+    <div id="btndiv">
+        <button id="start">시작</button>
+        <button id="stop">시작</button>
+    </div>
 </div>
 </body>
 </html>

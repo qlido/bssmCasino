@@ -9,16 +9,7 @@ body{
     align-content: space-between;
     height: 80vh;
 }
-#baedangdiv h1{
-    font-family: 'Jua', sans-serif;
-}
-#baedangdiv {
-    width: 70vw;
-    display: flex;
-    border: beige dashed;
-    flex-direction: row;
-    align-content: center;
-}
+
 #btn {
     display: flex;
     width: 100vw;

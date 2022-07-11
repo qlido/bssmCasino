@@ -32,9 +32,9 @@ function changeRanbae(){
     document.getElementById("baedang").innerHTML = `${ranbae}%`;
 }
 function holzzakgame(cho) {
+0
 
-
-    if (bet == null || bet === 0) {
+    if (bet == null || bet === 0 || isNaN(bet) || typeof bet == 'string') {
         Swal.fire({
             title: '베팅하세요!',
             text: "배팅을 하셔야 게임을 진행 하실수 있습니다",

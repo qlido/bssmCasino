@@ -6,6 +6,16 @@
     justify-content: space-evenly;
     align-content: center;
 }
+#baedangdiv h1{
+    font-family: 'Jua', sans-serif;
+}
+#baedangdiv {
+    width: 70vw;
+    display: flex;
+    border: beige dashed;
+    flex-direction: row;
+    align-content: center;
+}
 
 #head h1 {
     margin: auto;
