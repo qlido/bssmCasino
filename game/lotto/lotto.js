@@ -117,7 +117,7 @@ function lottocheck(){
             cancelButtonText: '나가기'
         }).then((result) => {
             if (result.isConfirmed) {
-                reset();
+
             } else {
                 gohome();
             }
