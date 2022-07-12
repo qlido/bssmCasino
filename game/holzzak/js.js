@@ -3,9 +3,6 @@ function gohome(){
     zmoney();
     window.location.href = "../../index.html";
 }
-function test(){
-    swal("Hello world!");
-}
 let bet = parseInt(localStorage.getItem("bet"));
 let money = parseInt(localStorage.getItem("money"));
 if(isNaN(money)){

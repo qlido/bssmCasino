@@ -27,14 +27,19 @@ function betting() {
     }
 }
     function popcl() {
-        opener.parent.location = "./holzzak/holzzak.html"
+        opener.parent.location = "./holzzak/holzzak.html";
+        opener.parent.location.reload();
         self.close();
     }
 
     function nobet() {
 
         if (bet > money) {
-            alert("돈이 부족합니다.");
+            Swal.fire({
+                icon: 'error',
+                title: '돈이 부족합니다',
+                text: '남은 돈 이내로 제출하여 주십시오',
+            })
         } else {
             money = money - bet;
             localStorage.setItem("money", money);
