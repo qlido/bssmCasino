@@ -38,11 +38,6 @@ let firstLunchList = [];
 lunchList.forEach(function(item) {
     firstLunchList.push(item);
 });
-
-let distanceList = ["10m", "8m", "7m", "7m", "9m"];
-let costList = ["7000won", "5000won", "4500won", "8000won", "9000won"];
-
-
 //제어할 요소선택 후 변수에 담기
 let displaySlot = document.querySelector(".menu_slot"); //menu slot
 let elem = document.querySelectorAll(".menu_print > h2"); //menu print
