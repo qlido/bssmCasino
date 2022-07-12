@@ -3,11 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link rel="stylesheet" href="bokgwon.css">
+    <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="./bokgwon.js"></script>
 </head>
 <body>
 <div id="head">
-  <h1 style="display: inline-block">BSSM Casino</h1>
-  <div id="moneyshow">adsf</div>
+  <h1 style="display: inline-block" onclick="gohome()">BSSM Casino</h1>
+  <div id="baedangdiv">
+    <h1>로또 추첨</h1>
+  </div>
+</div>
+<div id="wrapper">
+  <h1 id="title">복권 추첨</h1>
+
+  <div id="numbers">
+
+    <div id="lotto-title">Lotto 6/45</div>
+    <div id="whatisdate">제 845회</div>
+
+    <div class="deadline">
+      <div id="publish-day">발 행 일 : 2020/02/01</div>
+      <div id="raffle-day">추 첨 일 : 2020/02/01</div>
+      <div id="payments-day">지급기한 : 2020/02/01</div>
+      <div style="background: url(//i1.daumcdn.net/deco/contents/horizontalrule/line05.gif?v=2) repeat-x scroll left;  width: 99%; height: 15px"><hr style="border: black 0 none; left: -9999px; position: relative; top: -9999px"></div>
+    </div>
+
+    <div class="list-sum">
+
+      <div class="lotto-list A">
+        <div class="lotto-tag">A</div>
+        <div class="lotto-tag">자동</div>
+        <div class="ball a">?</div>
+        <div class="ball b">?</div>
+        <div class="ball c">?</div>
+        <div class="ball d">?</div>
+        <div class="ball e">?</div>
+        <div class="ball f">?</div>
+      </div>
+
+      <div class="lotto-list B">
+        <div class="lotto-tag">B</div>
+        <div class="lotto-tag">자동</div>
+        <div class="ball g">?</div>
+        <div class="ball h">?</div>
+        <div class="ball i">?</div>
+        <div class="ball j">?</div>
+        <div class="ball k">?</div>
+        <div class="ball l">?</div>
+      </div>
+      <div class="lotto-list C">
+        <div class="lotto-tag">C</div>
+        <div class="lotto-tag">자동</div>
+        <div class="ball m">?</div>
+        <div class="ball n">?</div>
+        <div class="ball o">?</div>
+        <div class="ball p">?</div>
+        <div class="ball q">?</div>
+        <div class="ball r">?</div>
+      </div>
+      <div class="lotto-list D">
+        <div class="lotto-tag">D</div>
+        <div class="lotto-tag">자동</div>
+        <div class="ball s">?</div>
+        <div class="ball t">?</div>
+        <div class="ball u">?</div>
+        <div class="ball v">?</div>
+        <div class="ball w">?</div>
+        <div class="ball x">?</div>
+      </div>
+      <div class="lotto-list E">
+        <div class="lotto-tag">E</div>
+        <div class="lotto-tag">자동</div>
+        <div class="ball y">?</div>
+        <div class="ball z">?</div>
+        <div class="ball 1">?</div>
+        <div class="ball 2">?</div>
+        <div class="ball 3">?</div>
+        <div class="ball 4">?</div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <button id="lotto-2-button">시작!</button>
 </div>
 </body>
 </html>
