@@ -16,7 +16,7 @@ html {
     box-sizing: border-box
 }
 
-body, div, button, h1 {
+body, div, button, h1 ,input,label{
     font: inherit;
     padding: 0;
     margin: 0;
@@ -30,6 +30,11 @@ body, div, button, h1 {
     margin: 2rem 0
 }
 
+#subtitle {
+    font-size: 2.5rem;
+    margin: 1.5rem 0
+}
+
 #wrapper {
     display: flex;
     flex-direction: column;
@@ -37,7 +42,7 @@ body, div, button, h1 {
     padding: 10px
 }
 
-#numbers {
+.numbers {
     display: flex;
     margin-bottom: 20px;
     padding: 30px;
@@ -45,7 +50,7 @@ body, div, button, h1 {
     border-radius: 20px
 }
 
-#numbers .ball {
+.numbers .ball {
     width: 80px;
     height: 80px;
     margin-right: 10px;
@@ -55,31 +60,31 @@ body, div, button, h1 {
     text-align: center;
 }
 
-#numbers .ball.blue {
+.numbers .ball.blue {
     background: #69c8f2
 }
 
-#numbers .ball.red {
+.numbers .ball.red {
     background:#ff7272
 }
 
-#numbers .ball.grey {
+.numbers .ball.grey {
     background:#aaa
 }
 
-#numbers .ball.bonus {
+.numbers .ball.bonus {
     background: #b0d840
 }
 
-#numbers .ball.done {
+.numbers .ball.done {
     animation: done .3s linear
 }
 
-#numbers .ball:last-child {
+.numbers .ball:last-child {
     margin-right: 0
 }
 
-#numbers .plus {
+.numbers .plus {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,17 +135,21 @@ body, div, button, h1 {
 }
 
 @media screen and (max-width: 800px) {
-    #numbers {
+    .numbers {
         flex-direction: column;
         align-items: center
     }
 
-    #numbers .ball {
+    .numbers .ball {
         margin-right: 0;
         margin-bottom: 10px
     }
 
-    #numbers .ball:last-child {
+    .numbers .ball:last-child {
         margin-bottom: 0
     }
+}
+#inputnum input{
+    border: 0;
+    background-color: transparent;
 }

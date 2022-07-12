@@ -29,25 +29,24 @@ function changeRanbae(){
     document.getElementById("baedang").innerHTML = `${ranbae}%`;
 }
 
-//런치리스트 배열생성
 let lunchList = ["ě","🤣",3,4,"🤩",6,7,8,9,"😋","👍","❤"]
 
-//배열복사
+
 let firstLunchList = [];
 
 lunchList.forEach(function(item) {
     firstLunchList.push(item);
 });
-//제어할 요소선택 후 변수에 담기
+
 let displaySlot = document.querySelector(".menu_slot"); //menu slot
 let elem = document.querySelectorAll(".menu_print > h2"); //menu print
 
 
 
-//reset check
+
 let resetNum = 1;
 
-//LunchIs 함수선언
+
 function lunchIs() {
     if (bet == null || bet === 0 || isNaN(bet) || typeof bet == 'string') {
         Swal.fire({
@@ -80,14 +79,13 @@ function lunchIs() {
                     return a;
                 }
 
-                //슬롯애니메이션 감추기
+
                 displaySlot.style.display = "none";
 
-                //shuffle 메소드를 사용하여 석은 배열에서 index[0]을 가져오기
                 console.log(shuffle(lunchList));
                 let lunckPick = shuffle(lunchList)[0];
 
-                //메뉴 노출
+
                 console.log(lunckPick);
                 elem[set].innerHTML = lunckPick;
 
@@ -140,7 +138,7 @@ function lunchIs() {
                         }
                     })
                 }
-                //reset 되었을 경우에 숨겨진 메뉴를 다시 노출시킴
+
                 if (resetNum == 0) {
                     elem.style.display = "block";
 
